@@ -22,18 +22,34 @@ const threeText = new PIXI.Text('3', style);
 const twoText = new PIXI.Text('2', style);
 const oneText = new PIXI.Text('1', style);
 
+    threeText.anchor.set(0.5);
+     threeText.x = app.screen.width / 2;
+     threeText.y = app.screen.height / 2;
 
 function funcx()
    {
-   // your code here
-   // break out here if needed
-   setTimeout(funcx, 3000);
+       twoText.anchor.set(0.5);
+       twoText.x = app.screen.width / 2;
+       twoText.y = app.screen.height / 2;
    }
 
-funcx();
-  
-  
-            
+function funcx3()
+   {
+     oneText.anchor.set(0.5);
+     oneText.x = app.screen.width / 2;
+     oneText.y = app.screen.height / 2;
+   }
+
+
+var timeleft = 3;
+var downloadTimer = setInterval(function(){
+  if(timeleft <= 0){
+    
+  }
+  else {
+   
+  }
+  timeleft -= 1;
 }, 1000);
 
 
