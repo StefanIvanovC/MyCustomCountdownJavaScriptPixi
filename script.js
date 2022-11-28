@@ -1,9 +1,10 @@
 const app = new PIXI.Application({ antialias: true });
 document.body.appendChild(app.view);
 
-const background = PIXI.Sprite.from('/Assets/play-scene.png');
+const background = PIXI.Sprite.from('Assets/play-scene.png');
 
 const graphics = new PIXI.Graphics();
+app.stage.addChild(graphics);
 
 graphics.lineStyle(10, 0xFFFFFF, 1);
 graphics.beginFill(0, 50, 1);
@@ -35,19 +36,18 @@ const one = new PIXI.Text('1', style);
      one.y = app.screen.height / 2;
  
 function makeAlertThree(){ 
-  app.stage.addChild(three);  
+  app.stage.addChild(three);
 };
 setInterval(makeAlertThree, 0);
-app.stage.removeChild(three);  
 
 function makeAlertTwo(){ 
+  three.x = app.screen.width;
   app.stage.addChild(two);
 };
 setInterval(makeAlertTwo, 1000);
 
 function makeAlertOne(){ 
+  two.x = app.screen.width;
   app.stage.addChild(one);
 };
 setInterval(makeAlertOne, 2000);
-
-app.stage.addChild(graphics);
