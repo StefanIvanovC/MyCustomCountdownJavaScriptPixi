@@ -1,7 +1,6 @@
-const app = new PIXI.Application({ antialias: true });
+const backgroundImg = PIXI.Sprite.from('Assets/play-scene.png');
+const app = new PIXI.Application({ antialias: true , background: backgroundImg});
 document.body.appendChild(app.view);
-
-const background = PIXI.Sprite.from('Assets/play-scene.png');
 
 const graphics = new PIXI.Graphics();
 app.stage.addChild(graphics);
@@ -41,13 +40,13 @@ function makeAlertThree(){
 setInterval(makeAlertThree, 0);
 
 function makeAlertTwo(){ 
-  three.x = app.screen.width;
+  three.x = app.screen.width * 2;
   app.stage.addChild(two);
 };
 setInterval(makeAlertTwo, 1000);
 
 function makeAlertOne(){ 
-  two.x = app.screen.width;
+  two.x = app.screen.width * 2;
   app.stage.addChild(one);
 };
 setInterval(makeAlertOne, 2000);
