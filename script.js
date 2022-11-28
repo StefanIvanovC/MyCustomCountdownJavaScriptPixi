@@ -9,7 +9,8 @@ graphics.lineStyle(10, 0xFFFFFF, 1);
 graphics.beginFill(0,10, 1);
 graphics.drawCircle(400, 250, 50);
 graphics.endFill();
-const basicText = new PIXI.Text('Basic text in pixi');
+
+const basicText = new PIXI.Text('Numbers');
 basicText.x = 50;
 basicText.y = 100;
 
@@ -18,11 +19,9 @@ app.stage.addChild(basicText);
 const style = new PIXI.TextStyle({
     fontFamily: 'Arial',
     fontSize: 36,
-    fontStyle: 'italic',
     fontWeight: 'bold',
-    fill: ['#ffffff', '#00ff99'], // gradient
-    stroke: '#4a1850',
-    strokeThickness: 5,
+    fill: ['#ffffff'],
+    strokeThickness: 15,
     lineJoin: 'round',
 });
 
