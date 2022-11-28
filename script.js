@@ -38,10 +38,9 @@ function makeAlertThree(){
   app.stage.addChild(three);  
 };
 setInterval(makeAlertThree, 0);
-app.stage.removeChild(three);
+app.stage.removeChild(three);  
 
 function makeAlertTwo(){ 
-  
   app.stage.addChild(two);
 };
 setInterval(makeAlertTwo, 1000);
