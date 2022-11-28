@@ -31,3 +31,4 @@ richText.y = 220;
 
 app.stage.addChild(richText);
 app.stage.addChild(graphics);
+
