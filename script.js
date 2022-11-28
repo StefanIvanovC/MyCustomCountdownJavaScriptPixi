@@ -3,7 +3,7 @@ document.body.appendChild(app.view);
 
 const graphics = new PIXI.Graphics();
 
-
+document.body.style.backgroundImage = "url('play-scene.png')"; 
 
 graphics.lineStyle(10, 0xFFBD01, 1);
 graphics.beginFill(0xC34288, 1);
