@@ -1,7 +1,9 @@
-const app = new PIXI.Application({ antialias: true,  background: 'play-scene.png' });
+const app = new PIXI.Application({ antialias: true,  background: '' });
 document.body.appendChild(app.view);
 
 const graphics = new PIXI.Graphics();
+const bg = PIXI.Sprite.from('assets/play-scene.png');
+
 
 document.body.style.backgroundImage = "url('play-scene.png')"; 
 
