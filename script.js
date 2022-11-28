@@ -17,18 +17,25 @@ const style = new PIXI.TextStyle({
     fill: ['#ffffff'],
     lineJoin: 'round',
 });
- const threeText = new PIXI.Text('3', style);
-  threeText.anchor.set(0.5);
-  threeText.x = app.screen.width / 2;
-  threeText.y = app.screen.height / 2;
 
-function countdown() {
-  threeText.anchor.set(0.5);
-  threeText.x = app.screen.width / 2;
-  threeText.y = app.screen.height / 2;
- }
+const threeText = new PIXI.Text('3', style);
+const twoText = new PIXI.Text('2', style);
+const oneText = new PIXI.Text('1', style);
+
+
+function funcx()
+   {
+   // your code here
+   // break out here if needed
+   setTimeout(funcx, 3000);
+   }
+
+funcx();
   
-countdown(threeText);
+  
+            
+}, 1000);
+
 
 app.stage.addChild(threeText);
 app.stage.addChild(graphics);
